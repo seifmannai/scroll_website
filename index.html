@@ -2,21 +2,18 @@
 <html>
 <head>
   <title>Unilumin Offices - Auto-Scroll</title>
+  <!-- Meta refresh avoids JS blocking -->
+  <meta http-equiv="refresh" content="0;url=https://www.unilumin.com/contact/global-offices">
   <script>
-    // Redirect to Unilumin's page
-    window.location.href = "https://www.unilumin.com/contact/global-offices";
-    
-    // Scroll logic (works on both mobile/desktop)
-    window.onload = function() {
-      setTimeout(function() {
-        // Scroll to 1600px by default (adjust as needed)
-        const scrollPosition = window.innerWidth > 768 ? 1600 : 1200;
-        window.scrollTo({
-          top: scrollPosition,
-          behavior: 'smooth'
-        });
-      }, 3000);  // 3-second delay for page load
-    };
+    // Scroll after Unilumin's page loads
+    setTimeout(function() {
+      // Target the "Global Offices" section (adjust pixels)
+      const scrollPosition = 1800; 
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: 'smooth'
+      });
+    }, 4000); // 4-second delay to ensure full load
   </script>
 </head>
 <body>
