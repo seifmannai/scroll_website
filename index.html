@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Unilumin Offices - Auto-Scroll</title>
-  <!-- Meta refresh avoids JS blocking -->
-  <meta http-equiv="refresh" content="0;url=https://www.unilumin.com/contact/global-offices">
+  <title>Unilumin Auto-Scroll</title>
+  <meta http-equiv="refresh" content="4;url=https://www.unilumin.com/contact/global-offices">
   <script>
-    // Scroll after Unilumin's page loads
-    setTimeout(function() {
-      // Target the "Global Offices" section (adjust pixels)
-      const scrollPosition = 6000; 
-      window.scrollTo({
-        top: scrollPosition,
-        behavior: 'smooth'
-      });
-    }, 4000); // 4-second delay to ensure full load
+    setTimeout(() => {
+      try {
+        window.scrollTo({top: 6000, behavior: 'smooth'});
+      } catch(e) {
+        document.body.innerHTML = '<h2>Please click <a href="javascript:window.scrollTo({top:1800,behavior:\'smooth\'})">HERE</a> to scroll</h2>';
+      }
+    }, 4500);
   </script>
 </head>
 <body>
-  <p>Redirecting to Unilumin Global Offices...</p>
+  <p>Loading Unilumin Global Offices page...</p>
 </body>
 </html>
